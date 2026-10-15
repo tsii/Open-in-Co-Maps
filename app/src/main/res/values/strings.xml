@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Open in Co-Maps</string>
-    <string name="share_target_label">Open in Co-Maps</string>
-    <string name="instructions">Share a place or map link from Google Maps and select “Open in Co-Maps”. The exact target coordinates are extracted and opened directly in CoMaps.\n\nShort links require an internet connection while they are being resolved.</string>
-    <string name="processing_link">Resolving Google Maps link…</string>
-    <string name="error_no_link">No Google Maps link was shared.</string>
-    <string name="error_no_coordinates">This Google Maps link does not contain exact target coordinates.</string>
+    <string name="app_name">CoMaps ❤️ Google Maps</string>
+    <string name="share_target_label">CoMaps ❤️ Google Maps</string>
+    <string name="instructions">Google Maps → CoMaps: Share a Google Maps link and select “CoMaps ❤️ Google Maps”.\n\nCoMaps → Google Maps link: Share a point from CoMaps and select “CoMaps ❤️ Google Maps”. A Google Maps link is created and immediately offered for sharing.\n\nGoogle Maps short links require an internet connection.</string>
+    <string name="processing_link">Converting map link…</string>
+    <string name="share_google_maps">Share Google Maps link</string>
+    <string name="error_no_link">No supported map link was shared.</string>
+    <string name="error_no_coordinates">This map link does not contain valid target coordinates.</string>
     <string name="error_comaps_not_installed">CoMaps is not installed.</string>
 </resources>

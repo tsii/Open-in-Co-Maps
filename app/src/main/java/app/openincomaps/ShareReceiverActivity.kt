@@ -2,6 +2,8 @@ package app.openincomaps
 
 import android.app.Activity
 import android.content.Intent
+import android.content.ComponentName
+import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
 import android.view.ViewGroup
@@ -46,16 +48,34 @@ class ShareReceiverActivity : Activity() {
         }
 
         executor.execute {
-            val coordinates = resolver.resolveFirst(candidates)
+            val coMapsCoordinates = CoMapsShareParser.extract(candidates)
+            val coordinates = coMapsCoordinates ?: resolver.resolveFirst(candidates)
             runOnUiThread {
                 when {
                     isFinishing || isDestroyed -> Unit
                     coordinates == null -> showMessageAndFinish(R.string.error_no_coordinates)
+                    coMapsCoordinates != null -> shareGoogleMapsLink(coMapsCoordinates)
                     CoMapsLauncher.open(this, coordinates) -> finish()
                     else -> showMessageAndFinish(R.string.error_comaps_not_installed)
                 }
             }
         }
+    }
+
+    private fun shareGoogleMapsLink(coordinates: Coordinates) {
+        val share = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, GoogleMapsShareUrl.create(coordinates))
+        }
+        val chooser = Intent.createChooser(share, getString(R.string.share_google_maps))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            chooser.putExtra(
+                Intent.EXTRA_EXCLUDE_COMPONENTS,
+                arrayOf(ComponentName(this, ShareReceiverActivity::class.java)),
+            )
+        }
+        startActivity(chooser)
+        finish()
     }
 
     private fun Intent.shareCandidates(): List<String> = buildList {
@@ -67,7 +87,9 @@ class ShareReceiverActivity : Activity() {
             item.text?.toString()?.let(::add)
             item.htmlText?.let(::add)
             item.uri
-                ?.takeIf { it.scheme.equals("http", true) || it.scheme.equals("https", true) }
+                ?.takeIf {
+                    it.scheme?.lowercase() in setOf("http", "https", "geo", "comaps", "cm", "ge0")
+                }
                 ?.toString()
                 ?.let(::add)
         }
