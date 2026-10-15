@@ -1,0 +1,4 @@
+CoMaps → Google-Maps-Link mit direktem Weiterteilen ergänzt.
+Google Maps → CoMaps bleibt erhalten.
+Neuer App-Name und Application-ID: de.ii.android.comapsgooglemaps.
+BSD-3-Clause ergänzt; Apache-2.0-Hinweise bleiben erhalten.

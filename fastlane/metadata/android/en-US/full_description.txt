@@ -1,0 +1,12 @@
+Share places between CoMaps and Google Maps without copying coordinates by hand.
+
+• Google Maps → CoMaps: share a Google Maps link to this app to open the point directly in CoMaps.
+• CoMaps → Google Maps: share a point to this app to create a Google Maps-compatible HTTPS link and immediately open Android’s share sheet.
+
+Supports Google Maps long and short links, CoMaps compressed links and geo: points. Google Maps links open in its app when installed, or in a browser. The proprietary Google Maps app is not required.
+
+Google short-link resolution needs an internet connection. CoMaps compressed links and geo: points are decoded locally. Google Maps is a non-free network service. This app has no advertising or analytics SDK.
+
+The original app code is BSD-3-Clause; the adapted CoMaps decoder retains Apache-2.0 licensing and notices. This is an independent app, not an official product of CoMaps or Google.
+
+Coded with GPT 6.1 Sol.

@@ -1,0 +1,40 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Resolves Google Maps short links and creates links to the proprietary Google
+      Maps service.
+Categories:
+  - Navigation
+License: Apache-2.0
+AuthorName: tsii
+SourceCode: https://github.com/tsii/Open-in-Co-Maps
+IssueTracker: https://github.com/tsii/Open-in-Co-Maps/issues
+Changelog: https://github.com/tsii/Open-in-Co-Maps/tags
+
+AutoName: CoMaps ❤️ Google Maps
+
+RepoType: git
+Repo: https://github.com/tsii/Open-in-Co-Maps.git
+
+Builds:
+  - versionName: 1.1.0
+    versionCode: 4
+    commit: v1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+MaintainerNotes: |-
+  Original application code is BSD-3-Clause. The adapted CoMaps coordinate
+  decoder is Apache-2.0 and retains its upstream notices. License describes
+  the combined binary; no relicensing of the BSD sources is intended.
+  See LICENSE, THIRD_PARTY_NOTICES.md and packaged assets/licenses/.
+
+  NonFreeNet is declared for Google Maps short-link resolution and generated
+  Google Maps links. A proprietary Google Maps app is not required: the links
+  also work in a web browser. CoMaps itself is free software. Please review
+  whether the explicit Google Maps integration also warrants NonFreeAdd.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9]+\.[0-9]+\.[0-9]+$
+CurrentVersion: 1.1.0
+CurrentVersionCode: 4

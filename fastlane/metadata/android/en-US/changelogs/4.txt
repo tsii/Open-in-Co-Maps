@@ -1,0 +1,4 @@
+Add CoMaps → Google Maps link conversion and immediate re-sharing.
+Keep Google Maps → CoMaps support.
+New app name and application ID: de.ii.android.comapsgooglemaps.
+Add BSD-3-Clause licensing and preserved Apache-2.0 notices.

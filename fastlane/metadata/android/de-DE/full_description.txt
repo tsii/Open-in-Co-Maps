@@ -1,0 +1,12 @@
+Teile Orte zwischen CoMaps und Google Maps, ohne Koordinaten von Hand zu kopieren.
+
+• Google Maps → CoMaps: Teile einen Google-Maps-Link an diese App. Der Punkt wird direkt in CoMaps geöffnet.
+• CoMaps → Google Maps: Teile einen Punkt an diese App. Sie erzeugt einen Google-Maps-kompatiblen HTTPS-Link und öffnet sofort das Android-Teilen-Menü.
+
+Unterstützt lange und kurze Google-Maps-Links, komprimierte CoMaps-Links und geo:-Punkte. Google-Maps-Links funktionieren in der installierten Maps-App oder im Browser. Die proprietäre Google-Maps-App ist nicht erforderlich.
+
+Google-Kurzlinks benötigen zur Auflösung Internet. Komprimierte CoMaps-Links und geo:-Punkte werden lokal decodiert. Google Maps ist ein nicht-freier Netzwerkdienst. Diese App enthält keine Werbung und kein Analyse-SDK.
+
+Eigener Code: BSD-3-Clause. Der angepasste CoMaps-Decoder behält Apache-2.0 und die zugehörigen Hinweise. Unabhängige App, kein offizielles Produkt von CoMaps oder Google.
+
+Mit GPT 6.1 Sol gecodet.
