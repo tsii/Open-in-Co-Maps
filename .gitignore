@@ -1,0 +1,14 @@
+*.iml
+.gradle/
+.kotlin/
+.idea/
+local.properties
+/build/
+**/build/
+.externalNativeBuild/
+.cxx/
+*.jks
+*.keystore
+.signing/
+dist/
+orchestrator.md
